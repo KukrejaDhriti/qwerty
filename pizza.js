@@ -15,7 +15,8 @@ function preload()
 function modelLoaded()
 {
     console.log("Model Loaded");
-status = true;
+status = true; 
+document.getElementById("status").innerHTML = "Status : Detecting Object";
 objectDetector.detect(img, gotResult);
 }
 
@@ -43,7 +44,8 @@ function draw()
         stroke(255, 0, 0);
         rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
 }
-
+    }
+}
 function back()
 {
     window.location = "index.html";
